@@ -54,7 +54,7 @@ async function searchDuckDuckGo() {
             document.getElementById("answer").innerText = bestAnswer;
             playSearchSound();
         } else {
-            document.getElementById("answer").innerText = "No answer found Bruh";
+            document.getElementById("answer").innerText = "No answer found";
             playNoResultSound();
         }
 
