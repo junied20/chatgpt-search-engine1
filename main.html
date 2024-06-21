@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SearchPedia</title>
+    <title>Google Sign-In Example</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 </head>
 <body>
-    <img src="logo.png" alt="SearchPedia Logo" class="logo">
-    <p class="subtitle"></p>
-    <div class="search-form">
-        <input id="searchInput" type="text" placeholder="Search the web..." onkeypress="handleKeyPress(event)">
-        <button onclick="searchDuckDuckGo()">Enter</button>
-        <button onclick="searchGoogle()">More</button>
-        <button onclick="openNewTab()">New Tab</button>
-    </div>
-    <div id="answer" class="answer"></div>
-    <div id="customAnswer" class="custom-answer hide"></div>
-    <audio id="searchSound" src="search_sound.mp3"></audio>
-    <audio id="noResultSound" src="no_result.mp3"></audio>
+    <h1>Google Sign-In Example</h1>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <button onclick="signOut()">Sign out</button>
+    <div id="answer"></div>
     <script src="scripts.js"></script>
 </body>
 </html>
